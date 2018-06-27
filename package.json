@@ -1,12 +1,13 @@
 {
-  "name": "adonis-fullstack-app",
+  "name": "webd",
   "version": "4.1.0",
   "adonis-version": "4.1.0",
   "description": "The fullstack application boilerplate for Adonisjs",
-  "main": "index.js",
   "scripts": {
     "start": "node server.js",
-    "test": "node ace test"
+    "test": "node ace test",
+    "dev": "cross-env NODE_ENV=development webpack --display-error-details",
+    "build": "cross-env NODE_ENV=production webpack"
   },
   "keywords": [
     "adonisjs",
@@ -25,17 +26,14 @@
     "@adonisjs/ignitor": "^2.0.6",
     "@adonisjs/lucid": "^5.0.4",
     "@adonisjs/session": "^1.0.25",
-    "@adonisjs/shield": "^1.0.6",
-    "vue": "^2.5.16"
+    "@adonisjs/shield": "^1.0.6"
   },
   "devDependencies": {
-    "babel-core": "^6.26.3",
-    "babel-loader": "^7.1.4",
-    "babel-preset-es2015": "^6.24.1",
-    "babel-preset-stage-0": "^6.24.1",
-    "webpack": "^4.12.1",
-    "webpack-cli": "^3.0.8",
-    "webpack-dev-server": "^3.1.4"
+    "cross-env": "^5.2.0",
+    "ts-loader": "^4.4.1",
+    "typescript": "^2.9.2",
+    "webpack": "^4.12.2",
+    "webpack-cli": "^3.0.8"
   },
   "autoload": {
     "App": "./app"
